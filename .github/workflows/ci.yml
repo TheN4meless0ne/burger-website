@@ -26,5 +26,5 @@ jobs:
 
       - name: 'Build Inventory Image'
         run: |
-          docker build ./bourghirs --tag ghcr.io/vaagenim/bourghirs-gruppe-2/website:latest
-          docker push ghcr.io/vaagenim/bourghirs-gruppe-2/website:latest
+          docker build ./bourghirs --tag ghcr.io/then4meless0ne/burger-website/website:latest
+          docker push ghcr.io/then4meless0ne/burger-website/website:latest
