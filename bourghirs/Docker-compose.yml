@@ -1,0 +1,5 @@
+services:
+  web:
+    image: ghcr.io/vaagenim/bourghirs-gruppe-2/website:latest
+    ports:
+      - "5001:5000"

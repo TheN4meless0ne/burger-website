@@ -1,0 +1,24 @@
+.form-container {
+    display: block;
+    width: 30%; /* Adjust width as needed */
+    padding-top: 20px;
+    float: left; /* Align to the left */
+}
+
+.form-content {
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding: 30px; /* Increased padding */
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Added box-shadow */
+    border-radius: 10px; /* Added border-radius */
+}
+
+#add-item-form div {
+    margin-bottom: 15px; /* Added margin between form elements */
+}
+
+#item-description {
+    width: 100%; /* Make the textarea full width */
+    height: 100px; /* Adjust height as needed */
+}

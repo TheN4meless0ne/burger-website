@@ -1,0 +1,21 @@
+.to-menu {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.to-menu .btn {
+    font-size: 1.5em;
+    padding: 10px 20px;
+}
+.slots-card {
+    float: right;
+    width: 15%;
+    text-align: center;
+}
+
+.quiz-card {
+    float: right;
+    width: 15%;
+    text-align: center;
+    clear: right;
+}

@@ -1,0 +1,30 @@
+name: Deploy Images to GHCR
+
+env:
+  DOTNET_VERSION: '6.0.x'
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+
+jobs:
+  push-website-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@main
+
+      - name: 'Login to GitHub Container Registry'
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.actor}}
+          password: ${{secrets.TOKEN}}
+
+      - name: 'Build Inventory Image'
+        run: |
+          docker build ./bourghirs --tag ghcr.io/vaagenim/bourghirs-gruppe-2/website:latest
+          docker push ghcr.io/vaagenim/bourghirs-gruppe-2/website:latest

@@ -1,0 +1,9 @@
+.menu-item img {
+    width: 35%;
+    float: right;
+}
+
+#item-disclaimer {
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <body class="menu-item"></body>
+        <div class="card">
+            <div class="card-header">
+                <h1>{{ item.name }}</h1>
+            </div>
+            <div class="card-body">
+                <blockquote>
+                    <img src="{{ url_for('static', filename='img/' ~ item.thumbnail) }}" alt="{{ item.thumbnail_alt }}">
+                    <h2>Price: ${{ item.price }}</h2>
+                    <p>{{ item.description }}</p>
+                    <h4>Allergens:</h4>
+                    <ul>
+                        {% for allergen in item.allergens %}
+                            <li>{{ allergen }}</li>
+                        {% endfor %}
+                    </ul>
+                </blockquote>
+            </div>
+            <p id="item-disclaimer">Disclaimer: All menu items can be made with gluten free bread</p>
+        </div>
+    </body>
+{% endblock content %}

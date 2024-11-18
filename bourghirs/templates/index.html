@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+    {% block content %}
+        <h1 class="title">🍔 Welcome to Gamblin Bourghirs! 🍔</h1>
+        <div class="to-menu">
+            <button class="btn btn-primary" onclick="window.location.href='menu'">Get Started!</button>
+        </div>
+        <button id="adminButton" class="btn btn-primary" onclick="toggleAdmin()">{{ 'Remove Admin' if user_admin else 'Make Admin' }}</button>
+        <div class="slots-card">
+            <div class="card">
+                <div class="card-body">
+                    </blockquote>
+                        <h5>Feeling lucky?</h5>
+                        <p>Try your hand at our slot machiene to get some discounts on your favourite Bourghirs!</p>
+                        <button class="btn btn-primary" onclick="window.location.href='slots'">Spin the Wheel</button>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="quiz-card">
+            <div class="card">
+                <div class="card-body">
+                </blockquote>
+                <h5>What Bourghir are you?</h5>
+                <p>Take the burger quiz to find out which Bourghir you are and to unlock exclusive items in our Roblox game</p>
+                <button class="btn btn-primary" onclick="window.location.href='quiz'">Take the Quiz</button>
+            </blockquote>
+        </div>
+        </div>
+        </div>
+        <script>
+            let isAdmin = {{ 'true' if user_admin else 'false' }};
+        </script>
+        {% endblock content %}

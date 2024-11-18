@@ -1,0 +1,41 @@
+img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px;
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.card {
+    flex: 0 1 22%; /* Allow cards to grow and shrink, with a base width of 22% */
+    min-width: 200px; /* Prevent cards from shrinking below 200px */
+    margin: 10px; /* Adjust the margin as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.menu-card {
+    max-width: 250px;
+}
+
+.hover-effect .card:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+    transition: transform 0.2s; /* Smooth transition */
+}
+
+.no-link-style {
+    text-decoration: none;
+    color: inherit;
+}
+
+.no-link-style:hover {
+    color: inherit;
+}
+
+.title {
+    text-align: center;
+}

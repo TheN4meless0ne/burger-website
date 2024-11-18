@@ -1,0 +1,41 @@
+{
+    "menu_items": [
+        {
+            "name": "The Gamblin Bourghir",
+            "price": 9.99,
+            "allergens": ["gluten", "dairy", "soy"],
+            "description": "A delicious burger with a side of fries",
+            "tags": ["Food", "Burger"],
+            "thumbnail": "burger.jpg",
+            "thumbnail_alt": "Picture of the Gamblin Bourghir"
+        },
+        {
+            "name": "Prime Rib Bourghir",
+            "price": 14.99,
+            "allergens": ["gluten", "dairy", "soy", "G R E E N"],
+            "description": "A burger with prime rib and a side of fries",
+            "tags": ["Food", "Burger"],
+            "thumbnail": "prime-rib.jpg",
+            "thumbnail_alt": "Picture of the Prime Rib Bourghir"
+        },
+        {
+            "name": "Crack Bourghir",
+            "price": 9.99,
+            "allergens": ["gluten", "dairy", "soy"],
+            "description": "This burger is so good, it's like crack",
+            "tags": ["Food", "Burger"],
+            "thumbnail": "crack-burger.jpeg",
+            "thumbnail_alt": "Picture of the Crack Bourghir"
+        },
+        {
+            "name": "Ghost Bourghir",
+            "price": 20,
+            "description": "A ghostly burger with smelted white cheese poured over the top",
+            "allergens": ["gluten", "dairy"],
+            "tags": ["Food", "Burger"],
+            "thumbnail": "ghost-bourghir.jpg",
+            "thumbnail_alt": "Picture of the Ghost Bourghir"
+        }
+    ]
+}
+

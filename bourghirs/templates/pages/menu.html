@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1 class="title">🍔 Gamblin Bourghirs Menu 🍔</h1>
+
+<!-- Filter Form -->
+<form method="GET" action="{{ url_for('menu') }}">
+    <h2>Filter Options</h2>
+    <label>
+        <input type="checkbox" name="food" {% if request.args.get('food') %}checked{% endif %}>
+        Food
+    </label>
+    <label>
+        <input type="checkbox" name="burger" {% if request.args.get('burger') %}checked{% endif %}>
+        Burger
+    </label>
+    <label>
+        <input type="checkbox" name="drink" {% if request.args.get('drink') %}checked{% endif %}>
+        Drink
+    </label>
+    <label>
+        <input type="checkbox" name="dessert" {% if request.args.get('dessert') %}checked{% endif %}>
+        Dessert
+    </label>
+    <button type="submit">Apply Filters</button>
+</form>
+
+<div class="menu-container hover-effect">
+    {% for item in menu_items %}
+        {% set food_filter = request.args.get('food') %}
+        {% set burger_filter = request.args.get('burger') %}
+        {% set drink_filter = request.args.get('drink') %}
+        {% set dessert_filter = request.args.get('dessert') %}
+
+        {% if (not food_filter or 'Food' in item.tags) and 
+              (not burger_filter or 'Burger' in item.tags) and 
+              (not drink_filter or 'Drink' in item.tags) and 
+              (not dessert_filter or 'Dessert' in item.tags) %}
+            <a href="menu/{{ item.name }}" class="no-link-style">
+                <div class="card menu-card">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <img src="{{ url_for('static', filename='img/' ~ item.thumbnail) }}" alt="{{ item.thumbnail_alt }}">
+                            <p>{{ item.name }}</p>
+                            <p>Price: ${{ item.price }}</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </a>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock content %}
